@@ -1,0 +1,25 @@
+{
+  "strategic_keywords": [
+    "announce", "announced", "announcement", "launch", "launched",
+    "partnership", "partners", "collaboration", "acquisition", "acquires",
+    "merger", "merges", "expansion", "expands", "invest", "investment",
+    "strategic", "initiative", "new initiative"
+  ],
+  "product_keywords": [
+    "new product", "product launch", "introduces", "introduced",
+    "new service", "new offering", "unveils", "unveiled", "new solution",
+    "new platform", "new technology", "new tool"
+  ],
+  "pricing_keywords": [
+    "price", "pricing", "cost", "discount", "rebate", "contract",
+    "negotiation", "purchasing agreement"
+  ],
+  "regulatory_keywords": [
+    "fda", "regulatory", "regulation", "compliance", "lawsuit", "settlement",
+    "investigation", "approval", "approved", "recall"
+  ],
+  "seo_keywords": [
+    "seo", "search engine", "website", "web presence", "digital",
+    "online presence", "traffic", "ranking"
+  ]
+}

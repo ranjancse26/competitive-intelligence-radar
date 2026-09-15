@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Intelligence Radar</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1>Competitive Intelligence Radar</h1>
+                    <p class="subtitle">Powered by SearchAPI.io</p>
+                </div>
+            </div>
+            <div class="status-badge" id="api-status">
+                <span class="status-dot"></span>
+                <span id="status-text">Checking API...</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Configuration Section -->
+            <section class="config-section">
+                <div class="config-grid">
+                    <div class="config-card">
+                        <h2>Competitors</h2>
+                        <p class="config-hint">Add competitors to track</p>
+                        <div class="tag-input" id="competitors-input">
+                            <div class="tags" id="competitors-tags"></div>
+                            <input type="text" id="competitor-input" placeholder="Add competitor..." />
+                        </div>
+                    </div>
+                    <div class="config-card">
+                        <h2>Keywords</h2>
+                        <p class="config-hint">Keywords to monitor</p>
+                        <div class="tag-input" id="keywords-input">
+                            <div class="tags" id="keywords-tags"></div>
+                            <input type="text" id="keyword-input" placeholder="Add keyword..." />
+                        </div>
+                    </div>
+                </div>
+                <div class="run-section">
+                    <button class="run-btn" id="run-radar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                        RUN RADAR
+                    </button>
+                    <div class="loading" id="loading" style="display: none;">
+                        <div class="spinner"></div>
+                        <span>Scanning competitive landscape...</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="results" style="display: none;">
+                <div class="results-header">
+                    <h2>COMPETITIVE RADAR</h2>
+                    <span class="generated-at" id="generated-at"></span>
+                </div>
+
+                <div class="radar-list" id="radar-list"></div>
+
+                <div class="summary-section">
+                    <h2>AI EXECUTIVE SUMMARY</h2>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 5h-2v6h2zm0 8h-2v2h2z"/>
+                            </svg>
+                        </div>
+                        <p id="ai-summary" class="ai-summary-text"></p>
+                    </div>
+                </div>
+
+                <br/>
+                <div class="detailed-summary-section">
+                    <h2>DETAILED ANALYSIS</h2>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8 20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-6z"/>
+                            </svg>
+                        </div>
+                        <div id="detailed-summary" class="detailed-summary-text"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="error" style="display: none;">
+                <div class="error-card">
+                    <h2>Error</h2>
+                    <p id="error-message"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

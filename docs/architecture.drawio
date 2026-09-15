@@ -1,0 +1,103 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram id="competitive-intelligence-radar" name="Competitive Intelligence Radar Architecture">
+    <mxGraphModel dx="2289" dy="1306" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1d27;" value="Competitive Intelligence Radar — Architecture" vertex="1">
+          <mxGeometry height="50" width="600" x="-231" y="-62" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5f7;strokeColor=#9673a6;fontColor=#1a1d27;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;" value="User" vertex="1">
+          <mxGeometry height="60" width="120" x="-542" y="-12" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a1d27;fontSize=12;verticalAlign=middle;align=center;spacing=5;" value="Frontend (Static)&#xa;HTML / CSS / JS&#xa;static/&#xa;index.html · app.js · styles.css" vertex="1">
+          <mxGeometry height="100" width="200" x="-582" y="97" as="geometry" />
+        </mxCell>
+        <mxCell id="fastapi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a1d27;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;spacing=5;" value="FastAPI Application&#xa;app/main.py&#xa;REST API" vertex="1">
+          <mxGeometry height="80" width="220" x="-284" y="227" as="geometry" />
+        </mxCell>
+        <mxCell id="radar" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a1d27;fontSize=12;verticalAlign=middle;align=center;spacing=5;" value="Radar Engine&#xa;app/radar.py&#xa;Signal Detection &amp; Scoring" vertex="1">
+          <mxGeometry height="80" width="220" x="-284" y="367" as="geometry" />
+        </mxCell>
+        <mxCell id="ai" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a1d27;fontSize=12;verticalAlign=middle;align=center;spacing=5;" value="AI Executive Summary&#xa;app/ai_summary.py&#xa;OpenAI / Rule-based" vertex="1">
+          <mxGeometry height="80" width="220" x="-284" y="507" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a1d27;fontSize=12;verticalAlign=middle;align=center;spacing=5;" value="SearchAPI.io Client&#xa;app/searchapi_client.py&#xa;HTTPX Async" vertex="1">
+          <mxGeometry height="80" width="220" x="-284" y="647" as="geometry" />
+        </mxCell>
+        <mxCell id="config" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#1a1d27;fontSize=12;verticalAlign=middle;align=center;spacing=5;" value="Config&#xa;app/config.py&#xa;Pydantic Settings&#xa;.env" vertex="1">
+          <mxGeometry height="80" width="160" x="87" y="227" as="geometry" />
+        </mxCell>
+        <mxCell id="schemas" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#1a1d27;fontSize=12;verticalAlign=middle;align=center;spacing=5;" value="Data Models&#xa;app/schemas.py&#xa;Pydantic" vertex="1">
+          <mxGeometry height="80" width="160" x="87" y="367" as="geometry" />
+        </mxCell>
+        <mxCell id="searchapi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#1a1d27;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;spacing=5;" value="SearchAPI.io&#xa;Google News&#xa;Google Search&#xa;Google Jobs" vertex="1">
+          <mxGeometry height="100" width="200" x="87" y="637" as="geometry" />
+        </mxCell>
+        <mxCell id="openai" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#1a1d27;fontSize=14;fontStyle=1;verticalAlign=middle;align=center;spacing=5;" value="OpenAI API&#xa;GPT-4o-mini" vertex="1">
+          <mxGeometry height="80" width="200" x="87" y="507" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1a1d27;strokeWidth=2;" target="frontend" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="frontend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1a1d27;strokeWidth=2;fontSize=11;fontColor=#1a1d27;" target="fastapi" value="HTTP / JSON&#xa;POST /api/radar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="fastapi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1a1d27;strokeWidth=2;" target="radar" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="fastapi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1a1d27;strokeWidth=2;" target="ai" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-352" y="267" />
+              <mxPoint x="-352" y="547" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="radar" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1a1d27;strokeWidth=2;fontSize=11;fontColor=#1a1d27;" target="client" value="Search queries">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-414" y="407" />
+              <mxPoint x="-414" y="687" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1a1d27;strokeWidth=2;fontSize=11;fontColor=#1a1d27;" target="searchapi" value="REST API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="ai" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1a1d27;strokeWidth=2;fontSize=11;fontColor=#1a1d27;" target="openai" value="Chat Completions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="config" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;strokeWidth=1.5;dashed=1;" target="fastapi" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="schemas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;strokeWidth=1.5;dashed=1;" target="fastapi" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="116" y="340" />
+              <mxPoint x="-126" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#1a1d27;" value="Legend" vertex="1">
+          <mxGeometry height="30" width="120" x="336" y="107" as="geometry" />
+        </mxCell>
+        <mxCell id="legend1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a1d27;fontSize=11;verticalAlign=middle;align=center;" value="Frontend / UI" vertex="1">
+          <mxGeometry height="40" width="160" x="336" y="147" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a1d27;fontSize=11;verticalAlign=middle;align=center;" value="Backend / Core" vertex="1">
+          <mxGeometry height="40" width="160" x="336" y="207" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#1a1d27;fontSize=11;verticalAlign=middle;align=center;" value="Support / Config" vertex="1">
+          <mxGeometry height="40" width="160" x="336" y="267" as="geometry" />
+        </mxCell>
+        <mxCell id="legend4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#1a1d27;fontSize=11;verticalAlign=middle;align=center;" value="External Services" vertex="1">
+          <mxGeometry height="40" width="160" x="336" y="327" as="geometry" />
+        </mxCell>
+        <mxCell id="flow" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#1a1d27;spacing=5;" value="Data Flow:&#xa;1. User configures competitors &amp; keywords in the UI&#xa;2. Frontend sends POST /api/radar to FastAPI&#xa;3. Radar Engine queries SearchAPI.io (news, web, jobs)&#xa;4. Signals are classified &amp; scored per competitor&#xa;5. AI Summary generates executive overview&#xa;6. Results returned to frontend for display" vertex="1">
+          <mxGeometry height="180" width="400" x="336" y="407" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

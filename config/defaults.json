@@ -1,0 +1,19 @@
+{
+  "default_competitors": [
+    "OpenAI",
+    "Google",
+    "Anthropic",
+    "Microsoft",
+    "Meta",
+    "Amazon",
+    "NVIDIA",
+    "xAI"
+  ],
+  "default_keywords": [
+    "artificial intelligence",
+    "generative AI",
+    "large language model",
+    "LLM"
+  ],
+  "default_days_back": 7
+}
