@@ -1,6 +1,6 @@
 # Competitive Intelligence Radar
 
-A FastAPI-powered competitive intelligence tool that continuously tracks competitor movements using [SearchAPI.io](https://www.searchapi.io/). It aggregates real-time signals from news, web, and job-posting sources, classifies them into actionable intelligence categories, and produces a ranked, scored view of which competitors are moving — and why.
+A FastAPI-powered competitive intelligence tool that continuously tracks competitor movements using [SearchAPI.io](https://www.searchapi.io/?utm_source=Dev&utm_medium=Ambassador&utm_campaign=ranjancse). It aggregates real-time signals from news, web, and job-posting sources, classifies them into actionable intelligence categories, and produces a ranked, scored view of which competitors are moving — and why.
 
 The "radar" metaphor is intentional: just as a radar system scans the surrounding airspace for incoming threats, this tool sweeps the public web for the competitive signals that matter to your business — product launches, partnerships, acquisitions, pricing changes, hiring spikes, regulatory actions, and SEO shifts — so you can react before your competitors do.
 
